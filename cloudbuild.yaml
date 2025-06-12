@@ -1,5 +1,5 @@
 # Top‐level timeout set to 14400 seconds (4 hours)
-timeout: "28800s"
+timeout: "57600s"
 
 options:
   logging: CLOUD_LOGGING_ONLY
@@ -26,4 +26,5 @@ steps:
           -Dsonar.login=sqp_e9274d4734ffdc63c9ad52ba6489ec7849e80e9a \
           -Dsonar.log.level=DEBUG \
           -Dsonar.working.directory=/tmp/.scannerwork \
-          -Dsonar.dryRun=true
+          -Dsonar.dryRun=true \
+          -Dsonar.scanner.app.jvm.opts="-Xmx20g -Xms512m"
